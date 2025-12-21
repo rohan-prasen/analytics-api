@@ -1,6 +1,16 @@
 from typing import List
 from pydantic import BaseModel
 
+"""
+id
+path
+description
+"""
+class EventCreateSchema(BaseModel):
+    path: str
+
+class EventUpdateSchema(BaseModel):
+    description: str
 
 class EventSchema(BaseModel):
     id: int
