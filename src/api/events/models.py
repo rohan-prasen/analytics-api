@@ -15,12 +15,12 @@ class EventModel(SQLModel, table=True):
     description: Optional[str] = ""
     created_at: datetime = Field(
         default_factory=get_utc_now,
-        sa_type=sqlmodel.Datetime(timezone=True),
+        sa_type=sqlmodel.DateTime(timezone=True),
         nullable=False
     )
     updated_at: datetime = Field(
         default_factory=get_utc_now,
-        sa_type=sqlmodel.Datetime(timezone=True),
+        sa_type=sqlmodel.DateTime(timezone=True),
         nullable=False
     )
 
